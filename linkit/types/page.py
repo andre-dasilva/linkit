@@ -48,6 +48,7 @@ class PageType(LinkType):
     def label(self):
         real_value = self.real_value()
         if real_value:
-            return real_value.get_content_obj()
+            page_content = real_value.get_content_obj()
+            return page_content.title
 
         return False
